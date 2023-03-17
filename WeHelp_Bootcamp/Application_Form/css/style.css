@@ -68,7 +68,7 @@ body {
 
 #hero .icon-box i {
     margin-right: 8px;
-    font-size: 30px;
+    font-size: 20px;
     color: #ffc451;
 }
 /*--------------------------------------------------------------
@@ -76,6 +76,16 @@ body {
 --------------------------------------------------------------*/
 #main {
     display: none;
+}
+
+#main .container {
+    padding-top: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+#main .content {
+    width: 50%;
 }
 
 /*--------------------------------------------------------------
