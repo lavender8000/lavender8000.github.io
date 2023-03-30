@@ -173,6 +173,7 @@ body {
 
 #navbar .open {
     display: flex;
+    width: 70px;
 }
 
 @media (max-width: 1200px) {
