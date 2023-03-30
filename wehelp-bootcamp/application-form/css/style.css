@@ -28,7 +28,7 @@ body {
 --------------------------------------------------------------*/
 #header {
     position: fixed;
-    z-index: 1000;
+    z-index: 99;
     height: 70px;
     top: 0;
     left: 0;
@@ -51,7 +51,7 @@ body {
     }
 }
 
-@media (max-width: 770px) {
+@media (max-width: 840px) {
     #header .container {
         width: 540px;
         padding: 0 12px;
@@ -119,6 +119,10 @@ body {
     transition: 0.3s;
 }
 
+#navbar .dropdown:hover i {
+    color: var(--primary-color);
+}
+
 #navbar .dropdown ul {
     position: absolute;
     visibility: hidden;
@@ -132,11 +136,13 @@ body {
     transition: 0.3s;
 }
 
-#navbar .dropdown:hover i {
-    color: var(--primary-color);
+#navbar .dropdown ul:hover {
+    visibility: visible;
+    opacity: 1;
+    margin-top: 0;
 }
 
-#navbar .dropdown:hover>ul {
+#navbar .dropdown .nav-toggle:hover ~ ul {
     visibility: visible;
     opacity: 1;
     margin-top: 0;
@@ -169,10 +175,76 @@ body {
     #navbar .logo a {
         font-size: 28px;
     }
+}
 
-    #navbar .dropdown i {
-        font-size: 28px;
+/**
+* Mobile Navigation 
+*/
+#navbar .nav-toggle-mobile {
+    display: none;
+    margin-top: 4px;
+    padding: 0 4px;
+}
+
+#navbar .nav-toggle-mobile i {
+    font-size: 30px;
+    color: var(--white);
+}
+
+@media (max-width: 1200px) {
+    #navbar {
+        display: flex;
+        justify-content: space-between;
     }
+
+    #navbar .dropdown .nav-toggle {
+        display: none;
+    }
+
+    #navbar .dropdown ul {
+        display: none;
+    }
+
+    #navbar .nav-toggle-mobile {
+        display: block;
+    }
+
+    #navbar .nav-toggle-mobile .close {
+        display: none;
+    }
+}
+
+#navbar .dropdown-mobile {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    transition: 0.5s;
+}
+
+#navbar .dropdown-mobile .close {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+#navbar .dropdown-mobile ul {
+    display: block;
+    margin-top: 0;
+    visibility: visible;
+    opacity: 1;
+    position: absolute;
+    top: 50px;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+}
+
+#navbar .dropdown-mobile .open {
+    display: none;
 }
 
 /*--------------------------------------------------------------
@@ -283,7 +355,7 @@ section {
     }
 }
 
-@media (max-width: 770px) {
+@media (max-width: 840px) {
     #hero {
         height: 100%;
     }
@@ -327,7 +399,7 @@ section {
     width: 800px;
 }
 
-@media (max-width: 770px) {
+@media (max-width: 840px) {
     #post .container {
         width: 540px;
         padding: 0 12px;

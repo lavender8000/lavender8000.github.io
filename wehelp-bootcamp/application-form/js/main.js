@@ -53,4 +53,25 @@ document.addEventListener('DOMContentLoaded', function() {
             linkScrollTo(event, this);
         });
     });
+
+    const mNavOpenEl = document.querySelector('.nav-toggle-mobile .open');
+    const dropdownEl = document.querySelector('.dropdown');
+
+    mNavOpenEl.addEventListener('click', () => {
+        dropdownEl.classList.add('dropdown-mobile');
+
+        let mDropdownUlEl = document.querySelector('.dropdown-mobile ul');
+
+        mDropdownUlEl.addEventListener('click', () => {
+            dropdownEl.classList.remove('dropdown-mobile');
+        });
+    });
+
+    const mNavCloseEl = document.querySelector('.nav-toggle-mobile .close');
+
+    mNavCloseEl.addEventListener('click', () => {
+        let mDropdownEl = document.querySelector('.dropdown-mobile');
+
+        mDropdownEl.classList.remove('dropdown-mobile');
+    });
 });
