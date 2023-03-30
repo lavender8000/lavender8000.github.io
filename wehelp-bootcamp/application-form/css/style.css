@@ -231,10 +231,9 @@ body {
 }
 
 #navbar .dropdown-mobile .close {
-    display: block;
-    position: absolute;
-    top: 15px;
-    right: 15px;
+    display: flex;
+    justify-content: end;
+    padding: 8px 4px 0 0;
 }
 
 #navbar .dropdown-mobile .open {
