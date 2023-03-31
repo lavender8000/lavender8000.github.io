@@ -257,6 +257,7 @@ body {
     visibility: visible;
     opacity: 1;
     position: absolute;
+    overflow: auto;
     top: 50px;
     right: 15px;
     bottom: 15px;
