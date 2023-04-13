@@ -18,11 +18,6 @@ body {
     display: none;
 }
 
-.fade-in {
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
-
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -133,6 +128,7 @@ body {
     position: absolute;
     visibility: hidden;
     opacity: 0;
+    display: flex;
     flex-direction: column;
     background: var(--white);
     padding: 10px 0;
@@ -428,6 +424,11 @@ section {
 
 #post .container {
     width: 800px;
+}
+
+#post .content {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 
 @media (max-width: 840px) {
