@@ -53,20 +53,20 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // 註冊 點擊後新增class屬性
+    // 註冊 點擊後新增class屬性<dropdown-mobile>
     const mNavOpenEl = document.querySelector('.nav-toggle-mobile .open');
     mNavOpenEl.addEventListener('click', () => {
         let dropdownEl = document.querySelector('.dropdown');
         dropdownEl.classList.add('dropdown-mobile');
 
-        // 註冊 點擊後移除class屬性
+        // 註冊 點擊後移除class屬性<dropdown-mobile>
         let mDropdownUlEl = document.querySelector('.dropdown-mobile ul');
         mDropdownUlEl.addEventListener('click', () => {
             dropdownEl.classList.remove('dropdown-mobile');
         });
     });
 
-    // 註冊 點擊後移除class屬性
+    // 註冊 點擊後移除class屬性<dropdown-mobile>
     const mNavCloseEl = document.querySelector('.nav-toggle-mobile .close');
     mNavCloseEl.addEventListener('click', () => {
         let mDropdownEl = document.querySelector('.dropdown-mobile');
