@@ -3,6 +3,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const mainEl = document.querySelector('#main');
     const postCntEl = document.querySelector('#post .container');
 
+    // 為特定元素增加class屬性<hidden>
+    mainEl.classList.add('hidden');
+    postCntEl.querySelectorAll('.content').forEach((el) => {
+        el.classList.add('hidden');
+    });
+
     // 製作 點擊滑動至目標 事件
     const linkScrollTo = (event, el) => {
         event.preventDefault();
